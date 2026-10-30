@@ -1,0 +1,44 @@
+ 1. Array Stack Overflow
+- Choose `1` (Array Stack).s
+- Enter capacity `2`.
+- Choose Push and enter `A`.
+- Choose Push and enter `B`.
+- Choose Push and enter `C`.
+
+Expected error:
+`Stack overflow: cannot push into a full stack.`
+
+2. Array Stack Underflow
+- Choose `1` (Array Stack).
+- Enter capacity `2`.
+- Choose Pop before pushing anything.
+
+Expected error:
+`Stack underflow: cannot pop from an empty stack.`
+
+3. Circular Array Queue Overflow
+- Choose `3` (Circular Array Queue).
+- Enter capacity `2`.
+- Enqueue `A`, then `B`, then try to enqueue `C`.
+
+Expected error:
+`Queue overflow: cannot enqueue into a full queue.`
+
+4. Circular Queue Wrap-Around
+- Choose `3` and enter capacity `3`.
+- Enqueue `A`, `B`, and `C`.
+- Dequeue once (removes `A`).
+- Enqueue `D`.
+
+The queue should display the logical order `B -> C -> D`, showing that the circular array reused an empty slot.
+
+5. Linked Stack / Linked Queue Underflow
+- Choose `2` (Linked Stack) and choose Pop while empty.
+- Choose `4` (Linked Queue) and choose Dequeue while empty.
+
+Both should display an underflow error.
+
+6. Application Exercises
+- Balanced input: `({[]})` -> `Balanced`.
+- Unbalanced input: `({[})` -> `Not Balanced`.
+- Print jobs: enter `J01` with 5 pages, `J02` with 3 pages, and `J03` with 10 pages. Leave Job ID blank to process them. The print order should be J01, J02, then J03.
